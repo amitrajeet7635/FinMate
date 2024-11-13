@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.tagline-head {
+    font-size: 60px;
+}
+
+.submit-btn {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    
+
+}
+.submit-btn-txt {
+    padding: 8px;
+    font-size: 20px;
+    padding-left: 80px;
+    padding-right: 80px;
+    border-radius: 5px;
+    
+
+}
+
+.mentors-card {
+    width: 23vw;
+    ;
+}
+
+.mentor-name {
+    font-size: 25px;
+    padding-left: 20px;
+}
+
+#popup {
+
+        z-index: 2; 
+        width: 60vw;
+        height: 40vh;
+        transform: scale(2);
+        
+      
+    }
+
+    .photo-wrapper img {
+        width: 50%; /* Ensure image fits within its container */
+        height: auto; /* Maintain aspect ratio */
+        
+    }
+

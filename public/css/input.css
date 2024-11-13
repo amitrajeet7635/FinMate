@@ -1,0 +1,339 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-width: 0%;
+
+}
+
+body {
+  @apply leading-[normal] m-0;
+  /* overflow-y: hidden; */
+  overflow-x: hidden;
+
+  --dot-bg: #f8f8f8;
+  --dot-color: black;
+  --dot-size: 1.3px;
+  --dot-space: 22px;
+  background:
+    linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+    linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+    var(--dot-color);
+}
+
+a {
+  text-decoration: none;
+  /* Remove underline */
+  color: inherit;
+  /* Inherit the color from the parent */
+}
+
+a:hover {
+  text-decoration: none;
+  /* Remove underline on hover */
+  color: inherit;
+  /* Inherit color on hover */
+}
+
+
+*,
+::before,
+::after {
+  border-width: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+.dot {
+  color: #fe7b5f;
+}
+
+
+
+.navlink {
+  position: relative;
+  top: 3px;
+  text-decoration: none;
+  height: 2rem;
+}
+
+.navlink::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #fe7b5f;
+  transition: width 0.4s ease, left 0.4s ease;
+}
+
+
+.navlink:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.tagline {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #333;
+  position: relative;
+  display: inline-block;
+  overflow: hidden; /* Ensures the highlight stays within the text bounds */
+}
+
+.tagline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, transparent 50%, #fede67 50%);
+  z-index: -1;
+  transition: transform 1s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.tagline.animate::before {
+  transform: scaleX(1);
+}
+
+
+.cta {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 10px;
+  border: 2px solid #c9a0ff;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  border-radius: 10px;
+}
+
+.cta a {
+  width: 100%;
+}
+
+.cta a i {
+  margin-left: 5.5rem;
+}
+
+.cta-feature {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  border-radius: 10px;
+}
+
+.cta-feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.cta-feature-mentor {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  border-radius: 5px;
+}
+
+.cta-feature-mentor:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.mentor-vis {
+  background: rgb(248, 248, 248);
+  background: linear-gradient(0deg, rgba(248, 248, 248, 1) 3%, rgba(239, 253, 229, 1) 50%, rgba(215, 250, 188, 1) 100%, rgba(199, 248, 161, 1) 100%, rgba(0, 0, 0, 1) 100%);
+}
+
+.p1 {
+  position: relative;
+  scale: 95%;
+}
+
+.p2 {
+  position: relative;
+  scale: 95%;
+}
+
+
+
+.anim {
+  position: relative;
+  width: 700px;
+  height: 400px;
+  display: flex;
+  ;
+  justify-content: center;
+  /* background-color: #c9a0ff; */
+}
+
+.anim img {
+  position: relative;
+  bottom: 5rem;
+  left: 10rem;
+  scale: 140%;
+  animation: 1.5s fadeInUp;
+}
+
+.anim img.gif-2 {
+  position: relative;
+  bottom: 5rem;
+  margin-right: 20rem;
+  scale: 150%;
+  animation: 1.5s fadeInUp;
+}
+
+.anim img.gif-3 {
+  position: relative;
+  bottom: 5rem;
+  margin-right: 10rem;
+  scale: 110%;
+  animation: 1.5s fadeInUp;
+}
+
+.anim img.gif-4 {
+  position: relative;
+  bottom: 5rem;
+  margin-right: 20rem;
+  scale: 150%;
+  animation: 1.5s fadeInUp;
+}
+
+
+
+
+.sub-title {
+  font-size: 1.5rem;
+}
+
+.feature-card {
+  margin-top: 2.5rem;
+}
+
+.card1:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card2:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card3:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card4:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.learn-pic {
+  scale: 40%;
+  position: relative;
+  left: -3.5rem;
+  /* filter: grayscale(100%); */
+  bottom: 3rem;
+}
+
+.mentor-pic {
+  scale: 35%;
+  position: relative;
+  left: -3.5rem;
+  /* filter: grayscale(100%); */
+  bottom: 3rem;
+}
+
+.trading-pic {
+  position: relative;
+  scale: 35%;
+  right: 11.5rem;
+  bottom: 11rem;
+  /* filter: grayscale(100%); */
+}
+
+.portfolio-pic {
+
+  position: relative;
+  scale: 25%;
+  right: 11rem;
+  bottom: 10.5rem;
+  /* filter: grayscale(100%); */
+
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  background-color: #141414;
+  color: #fff;
+  width: 100%;
+
+}
+
+.footer-title {
+  font-size: 1.5rem;
+}
+
+.footer-content {
+  font-size: 1rem;
+}
+
+.footer-content:hover {
+  color: #fe7b5f;
+}
+
+.footer-title-cnt {
+  font-size: 1rem;
+}
+
+/* Keyframes Animation */
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

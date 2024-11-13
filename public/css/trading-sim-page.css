@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+  .body{
+  overflow: hidden;
+  }
+  .hidden{
+    display: none;
+  }
+  .result-item {
+    border-bottom: #e3e3e3 1px solid;
+    border-radius: 0%;
+  }
+  
+  .result-item:hover{
+    background-color: #fede67;
+    cursor: pointer;
+
+  }
+
+  .widget{
+    border: black solid 3px;
+    margin: 20px;
+    z-index: -1;
+  }
+
+
+
+  

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Trading</title>
+    <link rel="stylesheet" href="/css/input.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/trading-sim-page.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;800&display=swap" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@97,300..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+    </style>
+</head>
+
+<body>
+    <%- include("./header.ejs") %>
+    <section class="flex flex-col w-screen">
+        <div class="bg-gray-400 w-screen flex justify-start pt-8">
+            <form id="searchForm" action="/search" class="max-w-[680px] w-full px-4" onsubmit="return false;">
+                <div class="relative">
+                    <input type="text" id="symbolInput" name="q"
+                        class="w-full border h-12 shadow p-4 rounded-full dark:text-gray-800 dark:border-gray-700 dark:bg-gray-200"
+                        placeholder="search" autocomplete="off" />
+                    <button type="button" id="searchButton">
+                        
+                    </button>
+                    <!-- Corrected Results Container -->
+                    <div id="results"
+                        class="font-inter bg-white rounded-lg shadow-md p-4 max-w-md mx-auto mt-4 max-h-64 overflow-y-auto hidden">
+                        <div class="result-list">
+                        <input type="hidden" id="selectedSymbol" autocomplete="off" />
+                        <p id="selectedSymbolDisplay" class="text-gray-700 font-medium"></p>
+                    </div>
+                    </div>
+
+
+                </div>
+            </form>
+        </div>
+        <div class="widget gap-10 border-black  flex bg-white">
+            <iframe referrerpolicy="origin" width="100%" height="470" style=" #ffffff; padding: 10px; border: none ; "
+                src="" id="dynamic-iframe"></iframe>
+            <div id="tradingview-widget-container" class="tradingview-widget-container__widget drop-shadow-2xl"></div>
+
+        </div>
+    </section>
+    <section id = " Detailed-section" class="w-1/2 ">
+        <div class = "flex flex-row">
+        <form class="w-1/2 mx-10 font-b ">
+            <label for="countries" class="block mb-2 text-sm font-inter text-black">Select an option</label>
+            <select id="countries"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 text-black  dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option selected>Choose an action</option>
+                <option>Buy</option>
+                <option>Sell</option>
+                <option>Hold</option>
+            </select>
+        </form>
+
+        <form class="w-1/2 mx-10 font-inter">
+            <label for="number-input" class="block mb-2 text-sm font-medium text-gray-900 text-black">Enter
+                Quantity:</label>
+            <input type="number" id="number-input" aria-describedby="helper-text-explanation"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="enter Quantity" required />
+        </form>
+    </div>
+    <div class="flex m-12">
+        <a href="#_"
+            class="  rounded px-5 py-2.5 overflow-hidden group bg-green-500 relative hover:bg-gradient-to-r hover:from-green-500 hover:to-green-400 text-white hover:ring-2 hover:ring-offset-2 hover:ring-green-400 transition-all ease-out duration-300">
+            <span
+                class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-black opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+            <span class="relative">Checkout</span>
+        </a>
+        </div>
+
+    </section>
+
+    <%- include("./footer.ejs") %>
+    <script src="js/trading-sim-utils.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/input.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/1-1mentorship.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;800&display=swap" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@97,300..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+    </style>
+</head>
+
+<body>
+    <%- include("./header.ejs") %>
+        <section class="w-screen flex flex-col ">
+
+
+            <div class="m-10">
+                <h1 class="font-poppins font-bold mr-10 tagline-head">Get Advice From Experts!</h1>
+                <h2 class="font-poppins mr-10 text-10">Book your 1:1 Mentorship now</h2>
+            </div>
+            <div class="flex justify-center">
+                <div class="bg-white drop-shadow-2xl rounded-lg m-10 mentors-card">
+                    <div class="photo-wrapper p-2 flex justify-center items-center">
+                        <img class="w-32 h-32 items-start rounded-full p-2"
+                            src="https://www.gravatar.com/avatar/2acfb745ecf9d4dccb3364752d17f65f?s=260&d=mp"
+                            alt="John Doe">
+                    </div>
+                    <h3 class="text-center font-poppins ml-2 p-5 font-medium mentor-name">Mark Brown</h3>
+                    <div class="p-2 m-2">
+                        <p class="font-inter text-center">
+                            Crypto Currency Expert, Intra Day Trading, Stock Market
+                        </p>
+                    </div>
+                    <div class="text-center p-4 w-full submit-btn">
+                        <a class="text-black font-inter bg-yellowgreen submit-btn-txt" onclick="return showPop();"
+                            href="#">Book a Session</a>
+                    </div>
+                </div>
+
+
+                <div id="popup" class="absolute flex items-center justify-center hidden ">
+                    <div class="bg-coral p-6 rounded-lg shadow-lg w-[20vw] h-[42vh]">
+                        <img class="w-32 h-32 items-start rounded-full p-4"
+                            src="https://www.gravatar.com/avatar/2acfb745ecf9d4dccb3364752d17f65f?s=260&d=mp"
+                            alt="John Doe">
+                        <h2 class="font-inter m-4">Book a mentorship session with Mark Brown</h2>
+                        
+                    <!-- Calendly link widget begin -->
+                     <div class="flex gap-4 justify-center items-center">
+                    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+                    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+                    <a href="" class="relative m-2 p-2  bg-white rounded border  flex-col scheduler font-inter text-gray" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/amanna1041?hide_landing_page_details=1&hide_gdpr_banner=1&primary_color=a3f263'});return false;">Schedule a meeting</a>
+                        <button onclick="closePop()" class="mt-4 mb-4 text-gray font-inter bg-white p-2 rounded">Close</button>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="bg-white drop-shadow-2xl rounded-lg m-10 mentors-card ">
+                    <div class="photo-wrapper p-2 flex justify-center items-center ">
+                        <img class="w-32 h-32 items-start rounded-full p-2"
+                            src="https://www.gravatar.com/avatar/2acfb745ecf9d4dccb3364752d17f65f?s=260&d=mp"
+                            alt="John Doe">
+                    </div>
+                    <h3 class=" text-center font-poppins  ml-2 p-5 font-medium mentor-name">Andrew Callingham</h3>
+
+                    <div class="p-2 m-2">
+                        <p class="font-inter text-center ">
+
+                            Trading Analyst, Data Scientists
+                        </p>
+                    </div>
+                    <div class="text-center p-4 w-full submit-btn">
+                        <a class=" text-black font-inter bg-yellowgreen submit-btn-txt" onclick="return showPop();" href="#">Book a Session</a>
+                    </div>
+
+
+                </div>
+                <div class="bg-white drop-shadow-2xl rounded-lg m-10 mentors-card ">
+                    <div class="photo-wrapper p-2 flex justify-center items-center ">
+                        <img class="w-32 h-32 items-start rounded-full p-2"
+                            src="https://www.gravatar.com/avatar/2acfb745ecf9d4dccb3364752d17f65f?s=260&d=mp"
+                            alt="John Doe">
+                    </div>
+                    <h3 class=" text-center font-poppins  ml-2 p-5 font-medium mentor-name">Zack Rawr</h3>
+
+                    <div class="p-2 m-2">
+                        <p class="font-inter text-center ">
+                            Angel Investor, Day Trading
+                        </p>
+                    </div>
+                    <div class="text-center p-4 w-full submit-btn">
+                        <a class=" text-black font-inter bg-yellowgreen submit-btn-txt" href="#">Book a Session</a>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="flex justify-center">
+                <div class="bg-white drop-shadow-2xl rounded-lg m-10 mentors-card ">
+                    <div class="photo-wrapper p-2 flex justify-center items-center ">
+                        <img class="w-32 h-32 items-start rounded-full p-2"
+                            src="https://www.gravatar.com/avatar/2acfb745ecf9d4dccb3364752d17f65f?s=260&d=mp"
+                            alt="John Doe">
+                    </div>
+                    <h3 class=" text-center font-poppins  ml-2 p-5 font-medium mentor-name">Tom Hardy</h3>
+
+                    <div class="p-2 m-2">
+                        <p class="font-inter text-center">
+                            EPFs, ETFs, Mutual Funds
+                        </p>
+                    </div>
+                    <div class="text-center p-4 w-full submit-btn">
+                        <a class=" text-black font-inter bg-yellowgreen submit-btn-txt" href="#">Book a Session</a>
+                    </div>
+
+
+                </div>
+
+                <div class="bg-white drop-shadow-2xl rounded-lg m-10 mentors-card ">
+                    <div class="photo-wrapper p-2 flex justify-center items-center ">
+                        <img class="w-32 h-32 items-start rounded-full p-2"
+                            src="https://www.gravatar.com/avatar/2acfb745ecf9d4dccb3364752d17f65f?s=260&d=mp"
+                            alt="John Doe">
+                    </div>
+                    <h3 class=" text-center font-poppins  ml-2 p-5 font-medium mentor-name">Kevin Durant</h3>
+
+                    <div class="p-2 m-2">
+                        <p class="font-inter text-center ">
+                    </div>
+                    <div class="text-center p-4 w-full submit-btn">
+                        <a class=" text-black font-inter bg-yellowgreen submit-btn-txt" href="#">Book a Session</a>
+                    </div>
+
+
+                </div>
+                <div class="bg-white drop-shadow-2xl rounded-lg m-10 mentors-card ">
+                    <div class="photo-wrapper p-2 flex justify-center items-center ">
+                        <img class="w-32 h-32 items-start rounded-full p-2"
+                            src="https://www.gravatar.com/avatar/2acfb745ecf9d4dccb3364752d17f65f?s=260&d=mp"
+                            alt="John Doe">
+                    </div>
+                    <h3 class=" text-center font-poppins  ml-2 p-5 font-medium mentor-name">Stephen McFillester</h3>
+
+                    <div class="p-2 m-2">
+                        <p class="font-inter text-center ">Currency Expert, Intra Day Trading, Stock Market</p>
+                    </div>
+                    <div class="text-center p-4 w-full submit-btn">
+                        <a class=" text-black font-inter bg-yellowgreen submit-btn-txt" href="#">Book a Session</a>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+        </section>
+
+
+
+        <script>
+            function showPop() {
+                const popup = document.getElementById('popup');
+                if (popup) {
+                    popup.classList.remove('hidden');
+                } else {
+                    console.error('Popup element not found');
+                }
+                return false; // Prevent the default anchor click behavior
+            }
+
+            function closePop() {
+                const popup = document.getElementById('popup');
+                if (popup) {
+                    popup.classList.add('hidden');
+                } else {
+                    console.error('Popup element not found');
+                }
+            }
+
+        
+        </script>
+        <%- include("./footer.ejs") %>
+</body>
+
+</html>

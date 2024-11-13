@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/input.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;800&display=swap" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@97,300..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+    </style>
+</head>
+<body>
+    <%- include("./header.ejs") %>
+    <div class="bg-gray-200 font-sans leading-normal tracking-normal">
+
+        <!-- Hero section -->
+        <section class="bg-white py-20">
+            <div class="container mx-auto px-4">
+                <div class="max-w-2xl mx-auto text-center">
+                    <h1 class="text-4xl font-bold mb-6">We're launching soon</h1>
+                    
+                </div>
+            </div>
+        </section>
+    
+        <!-- Features section -->
+        <section class="bg-gray-200 py-20">
+            <div class="container mx-auto px-4">
+                <div class="max-w-2xl mx-auto text-center">
+                    <h2 class="text-3xl font-bold mb-6">What to expect?</h2>
+                    <p class="text-gray-600 mb-12">Providing financial advise based on your financial knowledge.
+                    </p>
+                </div>
+                <div class="flex flex-wrap -mx-4 mt-12">
+                    <div class="w-full md:w-1/3 px-4 mb-8">
+                        <div class="rounded-md bg-white shadow-md p-8">
+                            <div class="text-4xl font-bold text-purple-600 mb-4">01</div>
+                            <h3 class="text-2xl font-bold mb-4">Feature 1</h3>
+                            <p class="text-gray-600 mb-4">In Context trained LLM model will be providing you guidance based upon multiple parameter.</p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/3 px-4 mb-8">
+                        <div class="rounded-md bg-white shadow-md p-8">
+                            <div class="text-4xl font-bold text-purple-600 mb-4">02</div>
+                            <h3 class="text-2xl font-bold mb-4">Feature 2</h3>
+                            <p class="text-gray-600 mb-4">Get a personalized portfolio management system, based on your financial knowledge and circumtances FinMate will provide you a diversified portfolio.</p>
+                        </div>
+                    </div>
+    
+                    <div class="w-full md:w-1/3 px-4 mb-8">
+                        <div class="rounded-md bg-white shadow-md p-8">
+                            <div class="text-4xl font-bold text-purple-600 mb-4">03</div>
+                            <h3 class="text-2xl font-bold mb-4">Feature 3</h3>
+                            <p class="text-gray-600 mb-4">It will foresee your upcoming events and recommend you to invest without facing any loss.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <%- include("./footer.ejs") %>
+</body>
+</html>
